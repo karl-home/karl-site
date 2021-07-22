@@ -5,7 +5,8 @@
       "long_desc": "Anonymize a numerical statistic.",
       "param": "-",
       "return": "-",
-      "network": "yes"
+      "network": "yes",
+      "filename": "test1.txt"
     },
     {
       "module_id": "false",
@@ -13,7 +14,8 @@
       "long_desc": " Output a single 0 bit.",
       "param": "-",
       "return": "false",
-      "network": "no"
+      "network": "no",
+      "filename": "test2.txt"
     },
     {
       "module_id": "firmware_update",
@@ -70,14 +72,5 @@
       "param": "image",
       "return": "box,all_count,count",
       "network": "no"
-    },
-    {
-      "module_id": "asdasdadsa",
-      "short_desc": "Detects a person in an image.",
-      "long_desc": "Detects a person in an image.",
-      "param": "asdsada",
-      "return": "box,sdssadasd,count",
-      "network": "no"
     }
-    
   ]

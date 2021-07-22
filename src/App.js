@@ -31,6 +31,7 @@ function Row(props) {
   const { data } = props;
   const [open, setOpen] = React.useState(false);
   const classes = useRowStyles();
+  const downloadFile = '/assets/' + data.filename
 
   return (
     <React.Fragment>
@@ -45,9 +46,11 @@ function Row(props) {
         </TableCell>
         <TableCell>{data.short_desc}</TableCell>
         <TableCell align = "right">
-          <IconButton aria-label="download" size="small" onClick = {() => window.open("http://127.0.0.1:5000/download")}>
-           {<GetAppIcon/>}
-          </IconButton>
+          <a href = {downloadFile} download>
+            <IconButton size = "small">
+              <GetAppIcon></GetAppIcon>
+            </IconButton>
+          </a>
         </TableCell>
       </TableRow>
       <TableRow>
