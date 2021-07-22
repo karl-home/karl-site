@@ -1,0 +1,83 @@
+[
+    {
+      "module_id": "differential_privacy",
+      "short_desc": "Anonymize a numerical statistic.",
+      "long_desc": "Anonymize a numerical statistic.",
+      "param": "-",
+      "return": "-",
+      "network": "yes"
+    },
+    {
+      "module_id": "false",
+      "short_desc": " Output a single 0 bit.",
+      "long_desc": " Output a single 0 bit.",
+      "param": "-",
+      "return": "false",
+      "network": "no"
+    },
+    {
+      "module_id": "firmware_update",
+      "short_desc": "Updates firmware",
+      "long_desc": "Downloads firmware from a trusted domain and forwards to the device.",
+      "param": "-",
+      "return": "firmware",
+      "network": "yes"
+    },
+    {
+      "module_id": "light_switch",
+      "short_desc": "Switches light blub on/off",
+      "long_desc": "Switches a light bulb on and off given an intent.",
+      "param": "light_intent",
+      "return": "state",
+      "network": "no"
+    },
+    {
+      "module_id": "search",
+      "short_desc": "Searches Google",
+      "long_desc": "Searches Google given a query intent.",
+      "param": "query_intent",
+      "return": "response",
+      "network": "yes"
+    },
+    {
+      "module_id": "targz",
+      "short_desc": "Compresses video files.",
+      "long_desc": "Combine video files from the past hour into a single compressed video file.",
+      "param": "files",
+      "return": "video",
+      "network": "no"
+    },
+    {
+      "module_id": "true",
+      "short_desc": "Output a single 1 bit.",
+      "long_desc": "Output a single 1 bit.",
+      "param": "-",
+      "return": "true",
+      "network": "no"
+    },
+    {
+      "module_id": "command_classifier",
+      "short_desc": "Classifies audio commands",
+      "long_desc": "Classifies an audio command as a web query or a command to turn a light bulb on or off. Otherwise does not ouput an intent.",
+      "param": "sound",
+      "return": "light,search",
+      "network": "no"
+    },
+    {
+      "module_id": "person_detection",
+      "short_desc": "Detects a person in an image.",
+      "long_desc": "Detects a person in an image.",
+      "param": "image",
+      "return": "box,all_count,count",
+      "network": "no"
+    },
+    {
+      "module_id": "asdasdadsa",
+      "short_desc": "Detects a person in an image.",
+      "long_desc": "Detects a person in an image.",
+      "param": "asdsada",
+      "return": "box,sdssadasd,count",
+      "network": "no"
+    }
+    
+  ]
