@@ -89,8 +89,8 @@ function Row(props) {
 export default function App() {
   return (
     <div>
-      <div className="center text-container">
-        <h1>Karl Site</h1>
+      <div className="header">
+        <h1>Karl Website</h1>
       </div>
       <div className="center text-container">
         <p>
@@ -98,6 +98,9 @@ export default function App() {
           <a href="http://www.ginayuan.com/preprints/preprint-karl.pdf">
             "The IoT Home Cloud for User-Defined Pipeline Policies".
           </a>
+        </p>
+        <p>
+          More information about the modules can be found in the table below
         </p>
       </div>
       <div className="center table-container">
