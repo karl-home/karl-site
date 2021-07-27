@@ -86,24 +86,27 @@ function Row(props) {
   );
 }
 
-export default function CollapsibleTable() {
+export default function App() {
   return (
-    <TableContainer component={Paper} elevation = {4}>
-      <Table stickyHeader = "true" size = "small">
-        <TableHead>
-          <TableRow>
-            <TableCell />
-            <TableCell>Module ID</TableCell>
-            <TableCell>Short Description</TableCell>
-            <TableCell align = "right">Download Static File</TableCell>
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          {rows.map((row) => (
-            <Row data={row} />
-          ))}
-        </TableBody>
-      </Table>
-    </TableContainer>
+    <div className = "center table-container">
+      <TableContainer component={Paper} elevation = {4}>
+        <Table stickyHeader = "true" size = "small">
+          <TableHead>
+            <TableRow>
+              <TableCell />
+              <TableCell>Module ID</TableCell>
+              <TableCell>Short Description</TableCell>
+              <TableCell align = "right">Download Static File</TableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            {rows.map((row) => (
+              <Row data={row} />
+            ))}
+          </TableBody>
+        </Table>
+      </TableContainer>
+    </div>
+    
   );
 }
