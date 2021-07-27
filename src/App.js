@@ -45,9 +45,9 @@ function Row(props) {
           {data.module_id}
         </TableCell>
         <TableCell>{data.short_desc}</TableCell>
-        <TableCell align = "right">
-          <a href = {downloadFile} download>
-            <IconButton size = "small">
+        <TableCell align="right">
+          <a href={downloadFile} download>
+            <IconButton size="small">
               <GetAppIcon></GetAppIcon>
             </IconButton>
           </a>
@@ -56,28 +56,28 @@ function Row(props) {
       <TableRow>
         <TableCell style={{ paddingBottom: 0, paddingTop: 0 }} colSpan={6}>
           <Collapse in={open} timeout="auto" unmountOnExit>
-            <Box margin = {1} marginBottom = {3}>
-            <Typography variant="p" gutterBottom component="div">
+            <Box margin={1} marginBottom={3}>
+              <Typography variant="p" gutterBottom component="div">
                 {data.long_desc}
-            </Typography>
-            <TableContainer component = {Paper}>
-              <Table size = "small">
-                <TableHead>
-                  <TableRow>
-                    <TableCell>Input Parameters</TableCell>
-                    <TableCell>Return Type</TableCell>
-                    <TableCell>Uses Network</TableCell>
-                  </TableRow>
-                </TableHead>
-                <TableBody>
-                  <TableRow>
-                    <TableCell>{data.param}</TableCell>
-                    <TableCell>{data.return}</TableCell>
-                    <TableCell>{data.network}</TableCell>
-                  </TableRow>
-                </TableBody>
-              </Table>
-            </TableContainer>
+              </Typography>
+              <TableContainer component={Paper}>
+                <Table size="small">
+                  <TableHead>
+                    <TableRow>
+                      <TableCell>Input Parameters</TableCell>
+                      <TableCell>Return Type</TableCell>
+                      <TableCell>Uses Network</TableCell>
+                    </TableRow>
+                  </TableHead>
+                  <TableBody>
+                    <TableRow>
+                      <TableCell>{data.param}</TableCell>
+                      <TableCell>{data.return}</TableCell>
+                      <TableCell>{data.network}</TableCell>
+                    </TableRow>
+                  </TableBody>
+                </Table>
+              </TableContainer>
             </Box>
           </Collapse>
         </TableCell>
@@ -88,25 +88,39 @@ function Row(props) {
 
 export default function App() {
   return (
-    <div className = "center table-container">
-      <TableContainer component={Paper} elevation = {4}>
-        <Table stickyHeader = "true" size = "small">
-          <TableHead>
-            <TableRow>
-              <TableCell />
-              <TableCell>Module ID</TableCell>
-              <TableCell>Short Description</TableCell>
-              <TableCell align = "right">Download Static File</TableCell>
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            {rows.map((row) => (
-              <Row data={row} />
-            ))}
-          </TableBody>
-        </Table>
-      </TableContainer>
+    <div>
+      <div className="center text-container">
+        <h1>Karl Site</h1>
+      </div>
+      <div className="center text-container">
+        <p>
+          Karl is a privacy-preserving framework that IoT devices can use to execute as much functionality as possible on a home cloud that runs on user-owned hardware. Rather than relying on third-party cloud services and local device state, devices (sensors) in the home cloud express their functionality in terms of small, ephemeral units of computation (similar to serverless) called modules. When functionality must be offloaded to the cloud, users define pipeline policies that justify under which conditions data can be exfiltrated. For details, see our preprint&nbsp;
+          <a href="http://www.ginayuan.com/preprints/preprint-karl.pdf">
+            "The IoT Home Cloud for User-Defined Pipeline Policies".
+          </a>
+        </p>
+      </div>
+      <div className="center table-container">
+        <TableContainer component={Paper} elevation={4}>
+          <Table stickyHeader="true" size="small">
+            <TableHead>
+              <TableRow>
+                <TableCell />
+                <TableCell>Module ID</TableCell>
+                <TableCell>Short Description</TableCell>
+                <TableCell align="right">Download Static File</TableCell>
+              </TableRow>
+            </TableHead>
+            <TableBody>
+              {rows.map((row) => (
+                <Row data={row} />
+              ))}
+            </TableBody>
+          </Table>
+        </TableContainer>
+      </div>
     </div>
-    
+
+
   );
 }
