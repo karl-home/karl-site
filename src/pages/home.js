@@ -15,6 +15,7 @@ import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
 import GetAppIcon from '@material-ui/icons/GetApp';
 import importedData from "../data.json"
+import Profile from "../components/profile"
 import "../index.css"
 
 const useRowStyles = makeStyles({
@@ -89,37 +90,37 @@ function Row(props) {
 export default function Home() {
   return (
     <div>
-      <div className="flex items-center h-auto bg-cardinal">
-        <h1 className="text-2xl py-3 pl-5">Karl Website</h1>
+      <div className="flex items-center justify-center h-auto bg-cardinal shadow-lg z-10">
+        <h1 className="text-2xl font-bold py-3 pl-5">Karl Website</h1>
         <div className="absolute right-0 pr-5 py-3">
           <div className="flex">
             <a href="/">
-              <p className="link">
+              <p className="nav-link">
                 Home
               </p>
             </a>
             <a href="/">
-              <p className="link pl-5">
+              <p className="nav-link pl-5">
                 People
               </p>
             </a>
           </div>
-          
         </div>
       </div>
       <div className="center text-container">
         <p>
           Karl is a privacy-preserving framework that IoT devices can use to execute as much functionality as possible on a home cloud that runs on user-owned hardware. Rather than relying on third-party cloud services and local device state, devices (sensors) in the home cloud express their functionality in terms of small, ephemeral units of computation (similar to serverless) called modules. When functionality must be offloaded to the cloud, users define pipeline policies that justify under which conditions data can be exfiltrated. For details, see our preprint&nbsp;
-          <a href="http://www.ginayuan.com/preprints/preprint-karl.pdf">
+          <a className="link" href="http://www.ginayuan.com/preprints/preprint-karl.pdf">
             "The IoT Home Cloud for User-Defined Pipeline Policies".
           </a>
         </p><br/>
         <p>
           More information about the modules can be found in the table below
         </p>
+
       </div>
       <div className="center table-container">
-        <TableContainer component={Paper} elevation={4}>
+        <TableContainer component={Paper} elevation={2}>
           <Table stickyHeader="true" size="small">
             <TableHead>
               <TableRow>
@@ -136,6 +137,63 @@ export default function Home() {
             </TableBody>
           </Table>
         </TableContainer>
+      </div>
+      <div className="center text-container">
+      <div className = "flex flex-wrap">
+          <Profile
+            key={1233214}
+            imgSrc={`/assets/headshots/david.jpg`}
+            name={"David Mazières"}
+            positions={["___"]}
+            linkedin={"https://www.linkedin.com/in/david-mazi%C3%A8res-20a92924/"}
+            github={"member.github"}
+          />
+          <Profile
+            key={1233214}
+            imgSrc={`/assets/headshots/gina.jpg`}
+            name={"Gina Yuan"}
+            positions={["Principal Investigator"]}
+            linkedin={"member.linkedin"}
+            github={"member.github"}
+            email={"ahdsada@gmasd.com"}
+          />
+          <Profile
+            key={1233214}
+            imgSrc={`/assets/headshots/dev.jfif`}
+            name={"Devrath Iyer"}
+            positions={["Undergrad Researcher"]}
+            linkedin={"member.linkedin"}
+            github={"member.github"}
+            email={"ahdsada@gmasd.com"}
+          />
+          <Profile
+            key={1233214}
+            imgSrc={`/assets/headshots/jaylene.jpg`}
+            name={"Jaylene Martinez"}
+            positions={["Undergrad Researcher"]}
+            linkedin={"member.linkedin"}
+            github={"member.github"}
+            email={"mjaylene@stanford.edu"}
+          />
+          <Profile
+            key={1233214}
+            imgSrc={`/assets/headshots/angel.jpg`}
+            name={"Angel Millard-Bruzos"}
+            positions={["Undergrad Researcher"]}
+            linkedin={"https://www.linkedin.com/in/angel-millard-bruzos-5a49581bb/"}
+            github={"member.github"}
+            email={"mjaylene@stanford.edu"}
+          />
+          <Profile
+            key={1233214}
+            imgSrc={`/assets/headshots/henry.jpg`}
+            name={"Henry Weng"}
+            positions={["Undergrad Researcher"]}
+            linkedin={"https://www.linkedin.com/in/henry-weng/"}
+            github={"https://github.com/henryweng03"}
+            email={"hweng@stanford.edu"}
+          />
+        </div>
       </div>
     </div>
   );

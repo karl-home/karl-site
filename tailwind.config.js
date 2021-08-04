@@ -4,7 +4,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        "cardinal": '#8C1515'
+        "cardinal": '#8C1515',
+        "light-cardinal": "#B83A4B"
+      },
+      fontFamily: {
+        "sourcesans": ["SourceSansPro", "Segoe UI"]
       }
     },
   },

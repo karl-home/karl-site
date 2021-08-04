@@ -9,20 +9,19 @@
 }
 
 .table-container {
-  margin-top: 30px;
-  margin-bottom: 30px;
-  width: 65vw;
-  max-width: 1100px;
+  @apply my-8 w-4/6 max-w-5xl
 }
 
 .text-container {
-  width: 65vw;
-  margin-top: 30px;
-  max-width: 1100px;
+  @apply mt-8 w-4/6 max-w-5xl
+}
+
+.nav-link{
+  @apply transition duration-100 text-white hover:text-red-300 hover:underline
 }
 
 .link{
-  @apply transition duration-100 text-white hover:text-red-300 hover:underline
+  @apply transition duration-100 text-cardinal hover:underline
 }
 
 .header {
@@ -37,12 +36,15 @@
 }
 
 p {
-  line-height: 1.5;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  @apply font-sourcesans leading-6 text-base
 }
 
 h1 {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: white;
+  @apply font-sourcesans text-white text-2xl;
 }
 
+@font-face {
+  font-family: 'SourceSans';
+  font-weight: 400;
+  src: url('./fonts/SourceSansPro/SourceSansPro-Regular.ttf')
+}
