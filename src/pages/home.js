@@ -28,78 +28,19 @@ const useRowStyles = makeStyles({
 
 const rows = importedData;
 
-function Row(props) {
-  const { data } = props;
-  const [open, setOpen] = React.useState(false);
-  const classes = useRowStyles();
-  const downloadFile = '/assets/' + data.filename
-
-  return (
-    <React.Fragment>
-      <TableRow className={classes.root}>
-        <TableCell>
-          <IconButton aria-label="expand row" size="small" onClick={() => setOpen(!open)}>
-            {open ? <KeyboardArrowUpIcon /> : <KeyboardArrowDownIcon />}
-          </IconButton>
-        </TableCell>
-        <TableCell component="th" scope="row">
-          {data.module_id}
-        </TableCell>
-        <TableCell>{data.short_desc}</TableCell>
-        <TableCell align="right">
-          <a href={downloadFile} download>
-            <IconButton size="small">
-              <GetAppIcon></GetAppIcon>
-            </IconButton>
-          </a>
-        </TableCell>
-      </TableRow>
-      <TableRow>
-        <TableCell style={{ paddingBottom: 0, paddingTop: 0 }} colSpan={6}>
-          <Collapse in={open} timeout="auto" unmountOnExit>
-            <Box margin={1} marginBottom={3}>
-              <Typography variant="p" gutterBottom component="div">
-                {data.long_desc}
-              </Typography>
-              <TableContainer component={Paper}>
-                <Table size="small">
-                  <TableHead>
-                    <TableRow>
-                      <TableCell>Input Parameters</TableCell>
-                      <TableCell>Return Type</TableCell>
-                      <TableCell>Uses Network</TableCell>
-                    </TableRow>
-                  </TableHead>
-                  <TableBody>
-                    <TableRow>
-                      <TableCell>{data.param}</TableCell>
-                      <TableCell>{data.return}</TableCell>
-                      <TableCell>{data.network}</TableCell>
-                    </TableRow>
-                  </TableBody>
-                </Table>
-              </TableContainer>
-            </Box>
-          </Collapse>
-        </TableCell>
-      </TableRow>
-    </React.Fragment>
-  );
-}
-
 export default function Home() {
   return (
     <div>
-      <div className="flex items-center justify-center h-auto bg-cardinal shadow-lg z-10">
+      <div id="top" className="flex items-center justify-center h-auto bg-cardinal shadow-lg z-10">
         <h1 className="text-2xl font-bold py-3 pl-5">Karl Website</h1>
         <div className="absolute right-0 pr-5 py-3">
           <div className="flex">
-            <a href="/">
+            <a href="#top">
               <p className="nav-link">
                 Home
               </p>
             </a>
-            <a href="/">
+            <a href="#people">
               <p className="nav-link pl-5">
                 People
               </p>
@@ -121,7 +62,7 @@ export default function Home() {
       </div>
       <div className="center table-container">
         <TableContainer component={Paper} elevation={2}>
-          <Table stickyHeader="true" size="small">
+          <Table stickyHeader="true">
             <TableHead>
               <TableRow>
                 <TableCell />
@@ -139,7 +80,7 @@ export default function Home() {
         </TableContainer>
       </div>
       <div className="center text-container">
-      <div className = "flex flex-wrap">
+      <div id="people" className = "flex flex-wrap">
           <Profile
             key={1233214}
             imgSrc={`/assets/headshots/david.jpg`}
@@ -196,5 +137,65 @@ export default function Home() {
         </div>
       </div>
     </div>
+  );
+}
+
+
+function Row(props) {
+  const { data } = props;
+  const [open, setOpen] = React.useState(false);
+  const classes = useRowStyles();
+  const downloadFile = '/assets/' + data.filename
+
+  return (
+    <React.Fragment>
+      <TableRow className={classes.root}>
+        <TableCell>
+          <IconButton aria-label="expand row" size="small" onClick={() => setOpen(!open)}>
+            {open ? <KeyboardArrowUpIcon /> : <KeyboardArrowDownIcon />}
+          </IconButton>
+        </TableCell>
+        <TableCell component="th" scope="row">
+          {data.module_id}
+        </TableCell>
+        <TableCell>{data.short_desc}</TableCell>
+        <TableCell align="right">
+          <a href={downloadFile} download>
+            <IconButton size="small">
+              <GetAppIcon></GetAppIcon>
+            </IconButton>
+          </a>
+        </TableCell>
+      </TableRow>
+      <TableRow>
+        <TableCell style={{ paddingBottom: 0, paddingTop: 0 }} colSpan={6}>
+          <Collapse in={open} timeout="auto" unmountOnExit>
+            <Box margin={1} marginBottom={3}>
+              <Typography variant="p" gutterBottom component="div">
+                {data.long_desc}
+              </Typography>
+              <TableContainer component={Paper}>
+                <Table size="small">
+                  <TableHead>
+                    <TableRow>
+                      <TableCell>Input Parameters</TableCell>
+                      <TableCell>Return Type</TableCell>
+                      <TableCell>Uses Network</TableCell>
+                    </TableRow>
+                  </TableHead>
+                  <TableBody>
+                    <TableRow>
+                      <TableCell>{data.param}</TableCell>
+                      <TableCell>{data.return}</TableCell>
+                      <TableCell>{data.network}</TableCell>
+                    </TableRow>
+                  </TableBody>
+                </Table>
+              </TableContainer>
+            </Box>
+          </Collapse>
+        </TableCell>
+      </TableRow>
+    </React.Fragment>
   );
 }
