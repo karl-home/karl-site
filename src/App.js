@@ -8,6 +8,7 @@ function App() {
   return (
     <div>
       <Home />
+      <div className="h-10"></div>
     </div>
   );
 }
