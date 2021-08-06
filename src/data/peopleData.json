@@ -1,0 +1,58 @@
+[
+    {
+      "name": "David Mazières",
+      "imgSrc": "/assets/headshots/david.jpg",
+      "positions": ["Principal Investigator"],
+      "linkedin": "",
+      "github": "",
+      "email": ""
+    },
+    {
+      "name": "Matei Zaharia",
+      "imgSrc": "/assets/headshots/matei.jpg",
+      "positions": ["Principal Investigator"],
+      "linkedin": "",
+      "github": "",
+      "email": ""
+    },
+    {
+      "name": "Gina Yuan",
+      "imgSrc": "/assets/headshots/gina.jpg",
+      "positions": ["PhD Student"],
+      "linkedin": "",
+      "github": "",
+      "email": ""
+    },
+    {
+      "name": "Devrath Iyer",
+      "imgSrc": "/assets/headshots/dev.jfif",
+      "positions": ["Undergrad Researcher"],
+      "linkedin": "",
+      "github": "",
+      "email": ""
+    },
+    {
+      "name": "Jaylene Martinez",
+      "imgSrc": "/assets/headshots/jaylene.jpg",
+      "positions": ["Undergrad Researcher"],
+      "linkedin": "",
+      "github": "",
+      "email": ""
+    },
+    {
+      "name": "Hector Angel Rivera",
+      "imgSrc": "/assets/headshots/angel.jpg",
+      "positions": ["Undergrad Researcher"],
+      "linkedin": "",
+      "github": "",
+      "email": ""
+    },
+    {
+      "name": "Henry Weng",
+      "imgSrc": "/assets/headshots/henry.jpg",
+      "positions": ["Undergrad Researcher"],
+      "linkedin": "",
+      "github": "",
+      "email": ""
+    }
+  ]

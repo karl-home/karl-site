@@ -14,9 +14,11 @@ import Paper from '@material-ui/core/Paper';
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
 import GetAppIcon from '@material-ui/icons/GetApp';
-import importedData from "../data.json"
+import moduleData from "../data/moduleData.json"
+import peopleData from "../data/peopleData.json"
 import Profile from "../components/profile"
 import "../index.css"
+import { Person } from '@material-ui/icons';
 
 const useRowStyles = makeStyles({
   root: {
@@ -26,7 +28,8 @@ const useRowStyles = makeStyles({
   },
 });
 
-const rows = importedData;
+const rows = moduleData;
+const people = peopleData;
 
 export default function Home() {
   return (
@@ -81,59 +84,17 @@ export default function Home() {
       </div>
       <div className="center text-container">
       <div id="people" className = "flex flex-wrap">
+        {people.map((person) => (
           <Profile
-            key={1233214}
-            imgSrc={`/assets/headshots/david.jpg`}
-            name={"David Mazières"}
-            positions={["___"]}
-            linkedin={"https://www.linkedin.com/in/david-mazi%C3%A8res-20a92924/"}
-            github={"member.github"}
+            key={person.name}
+            name={person.name}
+            imgSrc={person.imgSrc}
+            positions={person.positions}
+            linkedin={person.linkedin}
+            github={person.github}
+            email={person.email}
           />
-          <Profile
-            key={1233214}
-            imgSrc={`/assets/headshots/gina.jpg`}
-            name={"Gina Yuan"}
-            positions={["Principal Investigator"]}
-            linkedin={"member.linkedin"}
-            github={"member.github"}
-            email={"ahdsada@gmasd.com"}
-          />
-          <Profile
-            key={1233214}
-            imgSrc={`/assets/headshots/dev.jfif`}
-            name={"Devrath Iyer"}
-            positions={["Undergrad Researcher"]}
-            linkedin={"member.linkedin"}
-            github={"member.github"}
-            email={"ahdsada@gmasd.com"}
-          />
-          <Profile
-            key={1233214}
-            imgSrc={`/assets/headshots/jaylene.jpg`}
-            name={"Jaylene Martinez"}
-            positions={["Undergrad Researcher"]}
-            linkedin={"member.linkedin"}
-            github={"member.github"}
-            email={"mjaylene@stanford.edu"}
-          />
-          <Profile
-            key={1233214}
-            imgSrc={`/assets/headshots/angel.jpg`}
-            name={"Angel Millard-Bruzos"}
-            positions={["Undergrad Researcher"]}
-            linkedin={"https://www.linkedin.com/in/angel-millard-bruzos-5a49581bb/"}
-            github={"member.github"}
-            email={"mjaylene@stanford.edu"}
-          />
-          <Profile
-            key={1233214}
-            imgSrc={`/assets/headshots/henry.jpg`}
-            name={"Henry Weng"}
-            positions={["Undergrad Researcher"]}
-            linkedin={"https://www.linkedin.com/in/henry-weng/"}
-            github={"https://github.com/henryweng03"}
-            email={"hweng@stanford.edu"}
-          />
+        ))}
         </div>
       </div>
     </div>
