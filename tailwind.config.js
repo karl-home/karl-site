@@ -5,7 +5,8 @@ module.exports = {
     extend: {
       colors: {
         "cardinal": '#8C1515',
-        "light-cardinal": "#B83A4B"
+        "light-cardinal": "#B83A4B",
+        "dark-cardinal": "#820000",
       },
       fontFamily: {
         "sourcesans": ["SourceSansPro", "Segoe UI"]

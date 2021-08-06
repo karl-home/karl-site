@@ -5,7 +5,8 @@
       "positions": ["Principal Investigator"],
       "linkedin": "",
       "github": "",
-      "email": ""
+      "email": "",
+      "personalSite": "https://www.scs.stanford.edu/~dm/"
     },
     {
       "name": "Matei Zaharia",
@@ -13,7 +14,8 @@
       "positions": ["Principal Investigator"],
       "linkedin": "",
       "github": "",
-      "email": ""
+      "email": "",
+      "personalSite": "https://cs.stanford.edu/people/matei/"
     },
     {
       "name": "Gina Yuan",
@@ -21,7 +23,8 @@
       "positions": ["PhD Student"],
       "linkedin": "",
       "github": "",
-      "email": ""
+      "email": "",
+      "personalSite": "https://www.ginayuan.com/"
     },
     {
       "name": "Devrath Iyer",
@@ -29,7 +32,8 @@
       "positions": ["Undergrad Researcher"],
       "linkedin": "",
       "github": "",
-      "email": ""
+      "email": "",
+      "personalSite": ""
     },
     {
       "name": "Jaylene Martinez",
@@ -37,7 +41,8 @@
       "positions": ["Undergrad Researcher"],
       "linkedin": "",
       "github": "",
-      "email": ""
+      "email": "",
+      "personalSite": ""
     },
     {
       "name": "Hector Angel Rivera",
@@ -45,7 +50,8 @@
       "positions": ["Undergrad Researcher"],
       "linkedin": "",
       "github": "",
-      "email": ""
+      "email": "",
+      "personalSite": ""
     },
     {
       "name": "Henry Weng",
@@ -53,6 +59,7 @@
       "positions": ["Undergrad Researcher"],
       "linkedin": "",
       "github": "",
-      "email": ""
+      "email": "",
+      "personalSite": "https://henryweng.netlify.app"
     }
   ]

@@ -17,7 +17,7 @@
 }
 
 .nav-link{
-  @apply transition duration-100 text-white hover:text-red-300 hover:underline
+  @apply transition border p-1 px-3 border-transparent duration-150 text-white hover:border-white
 }
 
 .link{

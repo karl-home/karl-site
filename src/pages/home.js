@@ -16,9 +16,7 @@ import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
 import GetAppIcon from '@material-ui/icons/GetApp';
 import moduleData from "../data/moduleData.json"
 import peopleData from "../data/peopleData.json"
-import Profile from "../components/profile"
 import "../index.css"
-import { Person } from '@material-ui/icons';
 
 const useRowStyles = makeStyles({
   root: {
@@ -34,23 +32,6 @@ const people = peopleData;
 export default function Home() {
   return (
     <div>
-      <div id="top" className="flex items-center justify-center h-auto bg-cardinal shadow-lg z-10">
-        <h1 className="text-2xl font-bold py-3 pl-5">Karl Website</h1>
-        <div className="absolute right-0 pr-5 py-3">
-          <div className="flex">
-            <a href="#top">
-              <p className="nav-link">
-                Home
-              </p>
-            </a>
-            <a href="#people">
-              <p className="nav-link pl-5">
-                People
-              </p>
-            </a>
-          </div>
-        </div>
-      </div>
       <div className="center text-container">
         <p>
           Karl is a privacy-preserving framework that IoT devices can use to execute as much functionality as possible on a home cloud that runs on user-owned hardware. Rather than relying on third-party cloud services and local device state, devices (sensors) in the home cloud express their functionality in terms of small, ephemeral units of computation (similar to serverless) called modules. When functionality must be offloaded to the cloud, users define pipeline policies that justify under which conditions data can be exfiltrated. For details, see our preprint&nbsp;
@@ -81,21 +62,6 @@ export default function Home() {
             </TableBody>
           </Table>
         </TableContainer>
-      </div>
-      <div className="center text-container">
-      <div id="people" className = "flex flex-wrap">
-        {people.map((person) => (
-          <Profile
-            key={person.name}
-            name={person.name}
-            imgSrc={person.imgSrc}
-            positions={person.positions}
-            linkedin={person.linkedin}
-            github={person.github}
-            email={person.email}
-          />
-        ))}
-        </div>
       </div>
     </div>
   );

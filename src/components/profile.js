@@ -1,7 +1,7 @@
 import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { faEnvelope, faLink } from '@fortawesome/free-solid-svg-icons'
 
 export default function Profile({
   name,
@@ -10,10 +10,11 @@ export default function Profile({
   email,
   linkedin,
   github,
+  personalSite
 }) {
   return (
     <div className="w-full lg:w-1/2 2xl:w-1/3 py-2 px-2">
-      <div className="h-full flex items-center rounded-md shadow-material-2 bg-white px-4 sm:px-6 py-5">
+      <div className="h-full flex items-center rounded-xl shadow-material-2 bg-white px-4 sm:px-6 py-5">
         <div className="space-x-4 relative flex items-center ">
           <div className="flex-shrink-0">
             <img
@@ -41,8 +42,9 @@ export default function Profile({
               <ul className="flex">
                 {[
                   { href: linkedin, icon: faLinkedin, sr: 'linkedin' },
-                  { href: 'mailto:' + email, icon: faEnvelope, sr: 'github' },
-                  { href: github, icon: faGithub, sr: 'email' },
+                  { href: email, icon: faEnvelope, sr: 'email' },
+                  { href: github, icon: faGithub, sr: 'github' },
+                  { href: personalSite, icon: faLink, sr: 'personalSite' },
                 ].map(({ href, sr, icon }) => (
                   <div key={sr + href}>
                     {href && (
