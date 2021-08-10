@@ -16,6 +16,11 @@ export default function Navbar() {
               People
             </p>
           </a>
+          <a href="/modules">
+            <p className="nav-link">
+              Modules
+            </p>
+          </a>
         </div>
       </div>
     </div>

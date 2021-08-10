@@ -10,7 +10,7 @@ export default function People() {
   return (
     <div>
       <PeopleHero />
-      <div className="center text-container">
+      <div className="center profile-container">
         <div id="people" className = "flex flex-wrap justify-center">
           {people.map((person) => (
             <Profile

@@ -3,6 +3,7 @@ import "./index.css"
 import Home from "./pages/home";
 import People from "./pages/people"
 import Navbar from './components/navbar';
+import Modules from "./pages/modules"
 import {BrowserRouter as Router, Route, Switch } from "react-router-dom"
 
 
@@ -18,6 +19,9 @@ function App() {
             </Route>
             <Route exact path = "/people">
               <People />
+            </Route>
+            <Route exact path = "/modules">
+              <Modules />
             </Route>
           </Switch>
         </div>

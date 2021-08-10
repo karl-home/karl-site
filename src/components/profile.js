@@ -54,7 +54,7 @@ export default function Profile({
                           href={href}
                           className="px-2 py-1 rounded-full inline-block bg-gray-200 hover:bg-gray-300 text-black" rel="noreferrer"
                         >
-                        <FontAwesomeIcon icon={icon} className="w-5 h-5" />
+                          <FontAwesomeIcon icon={icon} className="w-5 h-5" />
                         </a>
                       </li>
                     )}

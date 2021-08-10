@@ -9,11 +9,15 @@
 }
 
 .table-container {
-  @apply my-8 w-4/6 max-w-5xl
+  @apply w-full px-8 my-8 sm:px-0 sm:w-5/6 md:w-2/3 max-w-5xl
 }
 
 .text-container {
-  @apply mt-8 w-4/6 max-w-5xl
+  @apply w-full px-8 mt-8 sm:px-0 sm:w-5/6 md:w-2/3 max-w-5xl
+}
+
+.profile-container {
+  @apply w-full px-8 mt-8 sm:px-0 sm:w-5/6 md:w-2/3 max-w-5xl
 }
 
 .nav-link{
@@ -36,7 +40,7 @@
 }
 
 p {
-  @apply font-sourcesans leading-6 text-base
+  @apply font-sourcesans text-base md:text-lg
 }
 
 h1 {
@@ -56,18 +60,17 @@ h1 {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  border-radius: 100vh;
-  background: #f7eded;
+  background: #fdf8f8;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #e2afaf;
+  background: #cc4c5d;
   border-radius: 100vh;
-  border: 3px solid #f7eded;
+  border: 3px solid #fdf8f8;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  @apply bg-light-cardinal
+  @apply bg-cardinal
 }
