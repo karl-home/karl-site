@@ -20,7 +20,7 @@ export default function Home() {
           <a className="link" target="_blank" rel="noopener noreferrer" href="https://github.com/karl-home/karl">
             GitHub repository 
           </a>
-          &nbsp;contains more details about the project, explanations of the installation procedure, and instructions for building and exploring the web UI.
+          &nbsp;contains more details about the project, explanations of the installation procedure, and instructions for building and configuring Karl using the web UI.
         </p>
       </div>
     </div>

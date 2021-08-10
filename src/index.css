@@ -60,14 +60,14 @@ h1 {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #fdf8f8;
+  background: #fdeeee;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: #cc4c5d;
   border-radius: 100vh;
-  border: 3px solid #fdf8f8;
+  border: 3px solid #fdeeee;
 }
 
 /* Handle on hover */

@@ -85,7 +85,7 @@ function Row(props) {
         </TableCell>
         <TableCell>{data.short_desc}</TableCell>
         <TableCell align="right">
-          <a href={downloadFile} download>
+          <a>
             <IconButton size="small">
               <GetAppIcon></GetAppIcon>
             </IconButton>
